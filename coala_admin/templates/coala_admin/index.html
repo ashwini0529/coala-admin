@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Review Blogs</title>
+</head>
+<body>
+<h3>Riview Blogs</h3>
+<ul>
+	{% for blog in blogs %}
+	<li><a href="/blog/review/{{blog.id}}/">{{blog.title}}</a></li>
+	{% endfor %}
+</ul>
+</body>
+</html>

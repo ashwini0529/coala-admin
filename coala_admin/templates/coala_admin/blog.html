@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{blog.title}}</title>
+</head>
+<body>
+<p><b>Title</b>: {{blog.title}}</p>
+<p><b>Blog content</b>: {{blog.description}}</p>
+<p><b>Author</b>: {{blog.author}}</p>
+<p><b>Publish Date</b>: {{blog.pub_date}}</p>
+{% if not blog.status %}
+<button>Approve Blog</button>
+{% else %}
+<button>Disapprove Blog</button>
+{% endif %}
+</body>
+</html>

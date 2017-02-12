@@ -10,5 +10,8 @@ class Blog(models.Model):
 	views = models.IntegerField(default=0)
 	feature_image_link = models.CharField(max_length=500) # feature image link of blog that could be used for og:image
 	author = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.title + '-' + self.description
 class Tags(models.Model):
 	tag = models.ForeignKey(Blog, on_delete=models.CASCADE)
